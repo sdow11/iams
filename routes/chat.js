@@ -1,0 +1,82 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET exp. */
+router.get('/', function(req, res, next) {
+  // res.render('index', {});
+  res.send
+  (`
+
+  <html>
+
+  <head>
+  <style>
+
+  .close-circle:hover {
+    stroke:black;
+  }
+
+  .svg {
+    width:100%;
+    height:auto;
+    margin:auto;
+  }
+  </style>
+  </head>
+  <body>
+  <svg class="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="2901" viewBox="0 0 1366 2901">
+  <defs>
+    <filter id="Ellipse_29" x="1079" y="138" width="222" height="222" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-pw.chat">
+      <rect width="1366" height="2901"/>
+    </clipPath>
+  </defs>
+  <g id="pw.chat" clip-path="url(#clip-pw.chat)">
+    <rect width="1366" height="2901" fill="#fff"/>
+    <g id="Component_12_3" data-name="Component 12 – 3" transform="translate(125 236)">
+      <g id="Group_308" data-name="Group 308">
+        <g id="Rectangle_95" data-name="Rectangle 95" fill="#fff" stroke="#e6e6e6" stroke-width="20">
+          <rect width="1116" height="401" rx="57" stroke="none"/>
+          <rect x="10" y="10" width="1096" height="381" rx="47" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_332" data-name="Group 332" transform="translate(20 434.068)">
+        <g id="Rectangle_95-2" data-name="Rectangle 95" transform="translate(0 -0.068)" fill="#fff" stroke="#e6e6e6" stroke-width="16">
+          <rect width="263" height="81" rx="40.5" stroke="none"/>
+          <rect x="8" y="8" width="247" height="65" rx="32.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_333" data-name="Group 333" transform="translate(20 543)">
+        <g id="Rectangle_95-3" data-name="Rectangle 95" fill="#fff" stroke="#e6e6e6" stroke-width="16">
+          <rect width="137" height="66" rx="33" stroke="none"/>
+          <rect x="8" y="8" width="121" height="50" rx="25" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_29)">
+      <g id="Ellipse_29-2" data-name="Ellipse 29" transform="translate(1088 144)" fill="#fff" stroke="#e1e1e1" stroke-width="11">
+        <circle cx="102" cy="102" r="102" stroke="none"/>
+        <circle cx="102" cy="102" r="96.5" fill="none"/>
+      </g>
+    </g>
+    <a href="/"><path id="close-outline" class="close-outline" d="M222.74,222.74,144,144m78.74,0L144,222.74" transform="translate(1006.5 62.5)" fill="none" stroke="#e9e9e9" stroke-linecap="round" stroke-linejoin="round" stroke-width="19"/></a>
+    <text id="Let_s_chat_" data-name="Let&apos;s chat! " transform="translate(341 434)" fill="#707070" font-size="65" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Let&apos;s chat! </tspan></text>
+    <text id="Email_me_chat_iamsadra.com" data-name="Email me @ chat@iamsadra.com" transform="translate(341 450)" fill="#707070" font-size="47" font-family="SegoeUI, Segoe UI"><tspan x="0" y="51">Email me @ chat@iamsadra.com</tspan></text>
+  </g>
+</svg>
+
+
+
+  `)
+});
+
+
+
+
+module.exports = router;
