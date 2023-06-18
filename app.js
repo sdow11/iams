@@ -41,5 +41,12 @@ app.use((req, res) => {
   res.status(404).sendFile(filePath);
 });
 
+// Start the server
+const PORT = parseInt(process.env.PORT) || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
+
 
 module.exports = app;
