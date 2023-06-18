@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: large;
+            color: #333;
+        }
+        #close-outline {
+            position: fixed;
+            top: 0;
+            z-index: 9;
+            height: 21rem;
+            width: 21rem;
+            stroke: #e9e9e9
+        }
+
+        #close-outline :hover {
+            fill: #333;
+            stroke: #333;
+
+        }
+
+        /* accordion */
+
+        .accordion {
+      overflow: hidden;
+      margin: 5rem;
+      text-align: center;
+    }
+
+    .accordion-item {
+        border: 10px solid #e9e9e9;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .accordion-title {
+      display: block;
+      padding: 10px;
+      font-size: xx-large;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 0;
+    }
+    .accordion-title:hover {
+      background-color: #eaeaea;
+    }
+    
+    .accordion-content {
+      background-color: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+    
+    }
+    .accordion-content img {
+        width: 12rem;
+    margin: 1rem;
+
+    }
+    .pta {
+        width: 15rem;
+    }
+    
+    .accordion-item.active .accordion-content {
+      max-height: 100%; /* Adjust the value to fit your content */
+      transition: max-height 0.5s ease;
+  
+    }
+    .accordion-item.active .accordion-title {
+        background-color: #eaeaea;
+    }
+
+
+
+        @media only screen and (max-width: 600px) {
+
+    
+  #close-outline {
+    height: 10rem;
+            width: 10rem;
+    }
+    #work {
+            height: 10rem;
+            width: 10rem;
+        }
+}
+@media only screen and (max-width: 450px) {
+    .accordion {
+      margin: 1rem;
+
+    }
+
+    .accordion-content img {
+        width: 7rem;
+    margin: 1rem;
+
+    }
+    .beyond_desc {
+        max-height: 450px; 
+        overflow-y: scroll;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+</head>
+
+<body>
+    <svg id="close-outline" stroke-miterlimit="10"
+        style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1"
+        viewBox="0 0 24 24" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+        xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs />
+        <g id="Untitled" vectornator:layerName="Untitled">
+           <a href="/"> <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.11 5.7C6.72 5.31 6.09 5.31 5.7 5.7C5.31 6.09 5.31 6.72 5.7 7.11L10.59 12L5.7 16.89C5.31 17.28 5.31 17.91 5.7 18.3C6.09 18.69 6.72 18.69 7.11 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+                fill="#e9e9e9" fill-rule="nonzero" opacity="1" /></a>
+        </g>
+    </svg>
+    <div id="fullpage">
+        <div class="section">
+    
+            <div class="accordion"  >
+                <div style="text-align: right; margin: 1rem 0 2rem;">
+                    <svg class="pta" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 24 24"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs/>
+                        <g id="Untitled">
+                        <path d="M20.74 4.96C20.61 4.43 20.07 4.11 19.54 4.23C17.16 4.77 14.49 5 12 5C9.51 5 6.84 4.77 4.46 4.24C3.92 4.12 3.39 4.43 3.26 4.97L3.24 5.02C3.11 5.56 3.43 6.12 3.97 6.24C5.59 6.61 7.34 6.86 9 7L9 18C9 18.55 9.45 19 10 19L10 19C10.55 19 11 18.55 11 18L11 13L13 13L13 18C13 18.55 13.45 19 14 19L14 19C14.55 19 15 18.55 15 18L15 7C16.66 6.86 18.41 6.61 20.03 6.24C20.57 6.12 20.89 5.56 20.76 5.02L20.74 4.96ZM12 4C13.1 4 14 3.1 14 2C14 0.9 13.1 0 12 0C10.9 0 10 0.9 10 2C10 3.1 10.9 4 12 4ZM8 24L8 24C8.55 24 9 23.55 9 23L9 23C9 22.45 8.55 22 8 22L8 22C7.45 22 7 22.45 7 23L7 23C7 23.55 7.45 24 8 24ZM12 24L12 24C12.55 24 13 23.55 13 23L13 23C13 22.45 12.55 22 12 22L12 22C11.45 22 11 22.45 11 23L11 23C11 23.55 11.45 24 12 24ZM16 24L16 24C16.55 24 17 23.55 17 23L17 23C17 22.45 16.55 22 16 22L16 22C15.45 22 15 22.45 15 23L15 23C15 23.55 15.45 24 16 24Z" fill="#e9e9e9" fill-rule="nonzero" opacity="1" stroke="none"/>
+                        </g>
+                        </svg>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-title">About Me</h3>
+                    <div class="accordion-content">
+                        <h1> Hi, I'm Sadra</h1>
+                        <h2> I'm a software engineer based in Los Angeles, CA. </h2>
+                        <h3> The rest is TBD.</h3>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-title">Emacs Config</h3>
+                    <div class="accordion-content">
+                      <h1><a href="https://github.com/sdow11/emacs"> Github </a></h1>
+                      <h2>It's a work in progress.</h2>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-title">Projects</h3>
+                    <div class="accordion-content">
+                        <h1> <a href="schoolr.io">schoolr.io</a></h1>
+                        <h2>A platform for students to connect with tutors.</h2>
+                        <h2> Abandoned AnuglarJS Project - ITS OOOOOOOOLD</h2>
+                        <h1> <a href="vytlz.com">vytlz.com</a></h1>
+                        <h2> Medical platform allowing doctor and patients to communicate.</h2>
+                        <h2> Abandoned Anuglar Project - Proprietary service now under a different name.</h2>
+                        <h1> QRTY</h1>
+                        <h2> A dynamic qr code generator.</h2>
+                        <h2> ReactJS Porject - In Progress</h2>
+                        <h2> TBD</h2>
+                    </div>
+                  </div>
+                <div class="accordion-item">
+
+                  <h3 class="accordion-title">Music</h3>
+                  <div class="accordion-content" >
+                    <h1>I like it a lot.</h1>
+                  </div>
+                </div>
+
+
+              </div>
+        </div>
+    </div>
+    <!-- accordion -->
+    <script>
+    // Add click event listeners to the accordion titles
+    const accordionTitles = document.querySelectorAll('.accordion-title');
+
+    accordionTitles.forEach(title => {
+      title.addEventListener('click', function () {
+        const currentAccordionItem = this.parentNode;
+        const isActive = currentAccordionItem.classList.contains('active');
+
+        // Close the previously opened section
+        const activeAccordionItem = document.querySelector('.accordion-item.active');
+        if (activeAccordionItem && activeAccordionItem !== currentAccordionItem) {
+          activeAccordionItem.classList.remove('active');
+        }
+
+        // Toggle the clicked section
+        currentAccordionItem.classList.toggle('active', !isActive);
+      });
+    });
+      </script>
+</body>
+
+</html>
