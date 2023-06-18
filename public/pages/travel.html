@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: large;
+            color: #333;
+        }
+        #fullpage {
+
+
+        }
+
+
+
+        #close-outline {
+            position: fixed;
+            top: 0;
+            z-index: 9;
+            height: 21rem;
+            width: 21rem;
+            stroke: #e9e9e9
+        }
+
+        #close-outline :hover {
+            fill: #333;
+            stroke: #333;
+
+        }
+
+        /* accordion */
+
+        .accordion {
+      overflow: hidden;
+      margin: 5rem;
+      text-align: center;
+    }
+
+    .accordion-item {
+        border: 10px solid #e9e9e9;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .accordion-title {
+      display: block;
+      padding: 10px;
+      font-size: xx-large;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 0;
+    }
+    .accordion-title:hover {
+      background-color: #eaeaea;
+    }
+    
+    .accordion-content {
+      background-color: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    
+    }
+    .accordion-content img {
+        width: 12rem;
+    margin: 1rem;
+
+    }
+    .pta {
+        width: 10rem;
+    }
+    
+    .accordion-item.active .accordion-content {
+      max-height: 500px; /* Adjust the value to fit your content */
+      transition: max-height 0.5s ease;
+  
+    }
+    .accordion-item.active .accordion-title {
+        background-color: #eaeaea;
+    }
+
+        @media only screen and (max-width: 600px) {
+
+  #close-outline {
+    height: 10rem;
+            width: 10rem;
+    }
+    #work {
+            height: 10rem;
+            width: 10rem;
+        }
+}
+@media only screen and (max-width: 450px) {
+    .accordion {
+      margin: 1rem;
+
+    }
+
+    .accordion-content img {
+        width: 7rem;
+    margin: 1rem;
+
+    }
+    .beyond_desc {
+        max-height: 450px; 
+        overflow-y: scroll;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+</head>
+
+<body>
+    <svg id="close-outline" stroke-miterlimit="10"
+        style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1"
+        viewBox="0 0 24 24" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+        xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs />
+        <g id="Untitled" vectornator:layerName="Untitled">
+           <a href="/"> <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.11 5.7C6.72 5.31 6.09 5.31 5.7 5.7C5.31 6.09 5.31 6.72 5.7 7.11L10.59 12L5.7 16.89C5.31 17.28 5.31 17.91 5.7 18.3C6.09 18.69 6.72 18.69 7.11 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+                fill="#e9e9e9" fill-rule="nonzero" opacity="1" /></a>
+        </g>
+    </svg>
+    <div id="fullpage">
+        <div class="section">
+    
+            <div class="accordion"  >
+                <div style="text-align: right; margin: 1rem 0 2rem;">
+                    <img class="pta" src="./images/airplane-outline.svg" alt="Airplane">
+                    <img class="pta" src="./images/train-outline.svg" alt="Train">
+                    <img class="pta" src="./images/car-sport-outline.svg" alt="Car">
+                </div>
+ 
+                <h1 style="text-align: right;">Planes, Trains and Automobiles</h1>
+                <div class="accordion-item">
+                    <h3 class="accordion-title">Japan</h3>
+                    <div class="accordion-content">
+  
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d3340361.695984157!2d134.9876917728987!3d35.15482584699611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C%20Japan!3m2!1d35.680399699999995!2d139.7690174!4m5!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2sKyoto%2C%20Japan!3m2!1d35.011564!2d135.7681489!4m5!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2sOsaka%2C%20Japan!3m2!1d34.6937249!2d135.5022535!4m5!1s0x600137c578a70cc1%3A0x4afed9b0b9492622!2sNara%2C%20Japan!3m2!1d34.685109!2d135.8048019!5e0!3m2!1sen!2sus!4v1687073704031!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-title">Norf Norf</h3>
+                    <div class="accordion-content">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d12452873.676717857!2d-131.41603452975647!3d40.35892832510553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!3m2!1d34.0522342!2d-118.24368489999999!4m5!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!3m2!1d37.7749295!2d-122.4194155!4m5!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C%20OR!3m2!1d45.515232!2d-122.67838529999999!4m5!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!3m2!1d47.6062095!2d-122.3320708!5e0!3m2!1sen!2sus!4v1687074252206!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                <div class="accordion-item">
+
+                  <h3 class="accordion-title">Road Trip # 1</h3>
+                  <div class="accordion-content" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d28527129.587878726!2d-120.58909067459444!3d29.214269393025774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!3m2!1d34.0522342!2d-118.24368489999999!4m5!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX!3m2!1d30.267152999999997!2d-97.7430608!4m5!1s0x8620a454b2118265%3A0xdb065be85e22d3b4!2sNew%20Orleans%2C%20LA!3m2!1d29.9510658!2d-90.0715323!4m5!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!3m2!1d25.7616798!2d-80.1917902!4m5!1s0x88fb75fc78f20659%3A0x4e0c6751036020bc!2sSavannah%2C%20GA!3m2!1d32.0808989!2d-81.091203!4m5!1s0x88fe7a42dca82477%3A0x35faf7e0aee1ec6b!2sCharleston%2C%20SC!3m2!1d32.7764749!2d-79.9310512!4m5!1s0x88f5045d6993098d%3A0x66fede2f990b630b!2sAtlanta%2C%20GA!3m2!1d33.748751999999996!2d-84.38768449999999!4m5!1s0x8864ec3213eb903d%3A0x7d3fb9d0a1e9daa0!2sNashville%2C%20TN!3m2!1d36.1626638!2d-86.7816016!4m5!1s0x87d2a134a11f569b%3A0x3405f5100df35b17!2sLittle%20Rock%2C%20AR!3m2!1d34.744461799999996!2d-92.2880157!4m5!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX!3m2!1d30.267152999999997!2d-97.7430608!5e0!3m2!1sen!2sus!4v1687070661243!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">France</h3>
+                  <div class="accordion-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d2835511.821857691!2d1.2319159114854363!3d46.05001089426916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!3m2!1d48.856614!2d2.3522219!4m5!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon%2C%20France!3m2!1d45.764043!2d4.835659!4m5!1s0x12b5eb8739bc9d07%3A0xe6429b6efa1d7b36!2sAvignon%2C%20France!3m2!1d43.949317!2d4.805528!4m5!1s0x12c98da304b91259%3A0x5cb953bec8b688a3!2sAix-en-Provence%2C%20France!3m2!1d43.529742!2d5.447426999999999!4m5!1s0x12c9bf4344da5333%3A0x40819a5fd970220!2sMarseille%2C%20France!3m2!1d43.296482!2d5.3697799999999996!5e0!3m2!1sen!2sus!4v1687071056357!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-title">Germany # 1</h3>
+                    <div class="accordion-content">
+                      <img src="./logos/neo4j.png" alt="Neo4j">
+                      <img src="./logos/redis.png" alt="Redis" >
+                      <img src="./logos/postgres.png" alt="Postgres">
+  
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-title">Germany # 2</h3>
+                    <div class="accordion-content">
+                      <img src="./logos/neo4j.png" alt="Neo4j">
+                      <img src="./logos/redis.png" alt="Redis" >
+                      <img src="./logos/postgres.png" alt="Postgres">
+  
+                    </div>
+                  </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-title">Road Trip # 2</h3>
+                  <div class="accordion-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d56649782.17905551!2d-137.82906114305274!3d29.93260112322738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x89e3652d0d3d311b%3A0x787cbf240162e8a0!2sBoston%2C%20MA!3m2!1d42.3600825!2d-71.0588801!4m5!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!3m2!1d40.7127753!2d-74.0059728!4m5!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!3m2!1d41.8781136!2d-87.6297982!4m5!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO!3m2!1d39.739235799999996!2d-104.990251!4m5!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV!3m2!1d36.171563!2d-115.13910089999999!4m5!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!3m2!1d34.0522342!2d-118.24368489999999!5e0!3m2!1sen!2sus!4v1687070892184!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- accordion -->
+    <script>
+    // Add click event listeners to the accordion titles
+    const accordionTitles = document.querySelectorAll('.accordion-title');
+
+    accordionTitles.forEach(title => {
+      title.addEventListener('click', function () {
+        const currentAccordionItem = this.parentNode;
+        const isActive = currentAccordionItem.classList.contains('active');
+
+        // Close the previously opened section
+        const activeAccordionItem = document.querySelector('.accordion-item.active');
+        if (activeAccordionItem && activeAccordionItem !== currentAccordionItem) {
+          activeAccordionItem.classList.remove('active');
+        }
+
+        // Toggle the clicked section
+        currentAccordionItem.classList.toggle('active', !isActive);
+      });
+    });
+      </script>
+</body>
+
+</html>
