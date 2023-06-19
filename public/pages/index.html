@@ -144,6 +144,8 @@ document.getElementById("Component_12_1").addEventListener('mouseout', function(
   $('.chat').css("stroke", "#e9e5e5")
 })
 
+function checkMediaQueries() {
+
  /* Media query for mobile devices */
  if (window.matchMedia("(max-width: 450px)").matches) {
       /* Keyframe animations */
@@ -219,6 +221,10 @@ document.getElementById("Component_12_1").addEventListener('mouseout', function(
         element.style.animationDelay = index * 0.5 + "s";
       });
     }
+
+  }
+
+  checkMediaQueries();
 </script>
 
 
