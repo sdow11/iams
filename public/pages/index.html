@@ -144,12 +144,7 @@ document.getElementById("Component_12_1").addEventListener('mouseout', function(
   $('.chat').css("stroke", "#e9e5e5")
 })
 
-function checkMediaQueries() {
-
- /* Media query for mobile devices */
- if (window.matchMedia("(max-width: 450px)").matches) {
-      /* Keyframe animations */
-      var caseColorTransition = `@keyframes caseColorTransition {
+var caseColorTransition = `@keyframes caseColorTransition {
         0% {
           stroke: #e6e6e6; /* Start with grey stroke */
         }
@@ -200,31 +195,42 @@ function checkMediaQueries() {
       var style = document.createElement("style");
       style.innerHTML = caseColorTransition + personColorTransition + chatColorTransition + planeColorTransition;
       document.head.appendChild(style);
+
+function checkMediaQueries() {
+
+
+
+ /* Media query for mobile devices */
+ if (window.matchMedia("(max-width: 450px)").matches) {
+      /* Keyframe animations */
+
   /* Apply animations to elements with different delays */
   document.querySelectorAll("#briefcase-outline-2 path, #briefcase-outline-2 rect").forEach(function (element, index) {
-        element.style.animation = "caseColorTransition 4s infinite";
+        element.style.animation = "caseColorTransition 4s 2";
         element.style.animationDelay = index * 0.5 + "s";
       });
 
       document.querySelectorAll(".chat").forEach(function (element, index) {
-        element.style.animation = "chatColorTransition 4s infinite";
+        element.style.animation = "chatColorTransition 4s 2";
         element.style.animationDelay = index * 0.5 + "s";
       });
 
       document.querySelectorAll("#airplane-outline path").forEach(function (element, index) {
-        element.style.animation = "planeColorTransition 4s infinite";
+        element.style.animation = "planeColorTransition 4s 2";
         element.style.animationDelay = index * 0.5 + "s";
       });
 
       document.querySelectorAll(".accessibility").forEach(function (element, index) {
-        element.style.animation = "personColorTransition 4s infinite";
+        element.style.animation = "personColorTransition 4s 2";
         element.style.animationDelay = index * 0.5 + "s";
       });
     }
 
   }
 
-  document.addEventListener("DOMContentLoaded", checkMediaQueries);
+  checkMediaQueries();
+
+
 </script>
 
 
