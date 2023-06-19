@@ -15,7 +15,7 @@
   #briefcase-outline-2 path:hover, #briefcase-outline-2 rect:hover {
     stroke : #EFE3CC;
   }
-
+  
   #planet-outline-2 path:hover, #planet-outline-2 circle:hover {
     stroke : #E4C7F5;
   }
@@ -104,7 +104,7 @@
 
 /* BREIFCASE */
 document.getElementById("briefcase-outline").addEventListener('mouseover', function(){
-  $('.briefcase').css("stroke", "#EFE3CC")
+  $('.briefcase').css("stroke", "#fcd182")
 })
 
 
@@ -123,14 +123,14 @@ document.getElementById("planet-outline").addEventListener('mouseout', function(
 })
 
 
-/* ACCESSIBILITY */
+/* PERSON */
 document.getElementById("accessibility-outline").addEventListener('mouseover', function(){
   $('.accessibility').css("stroke", "#CDF9FB")
 })
 
 
 document.getElementById("accessibility-outline").addEventListener('mouseout', function(){
-  $('.accessibility').css("stroke", "#e9e5e5")
+  $('.accessibility').css("stroke", "#d0cbcb")
 })
 
 
@@ -143,6 +143,82 @@ document.getElementById("Component_12_1").addEventListener('mouseover', function
 document.getElementById("Component_12_1").addEventListener('mouseout', function(){
   $('.chat').css("stroke", "#e9e5e5")
 })
+
+ /* Media query for mobile devices */
+ if (window.matchMedia("(max-width: 450px)").matches) {
+      /* Keyframe animations */
+      var caseColorTransition = `@keyframes caseColorTransition {
+        0% {
+          stroke: #e6e6e6; /* Start with grey stroke */
+        }
+        50% {
+          stroke: #fcd182; /* Transition to #fcd182 at 50% */
+        }
+        100% {
+          stroke: #e6e6e6; /* Return to grey stroke */
+        }
+      }`;
+
+      var personColorTransition = `@keyframes personColorTransition {
+        0% {
+          stroke: #d0cbcb; 
+        }
+        50% {
+          stroke: #CDF9FB;
+        }
+        100% {
+          stroke: #d0cbcb; /* Return to black stroke */
+        }
+      }`;
+
+      var chatColorTransition = `@keyframes chatColorTransition {
+        0% {
+          stroke: #e6e6e6; 
+        }
+        50% {
+          stroke: #FBB4B4;
+        }
+        100% {
+          stroke: #e6e6e6; 
+        }
+      }`;
+
+      var planeColorTransition = `@keyframes planeColorTransition {
+        0% {
+          stroke: #e6e6e6; 
+        }
+        50% {
+          stroke: #D7FBCF; 
+        }
+        100% {
+          stroke: #e6e6e6;
+        }
+      }`;
+
+      var style = document.createElement("style");
+      style.innerHTML = caseColorTransition + personColorTransition + chatColorTransition + planeColorTransition;
+      document.head.appendChild(style);
+  /* Apply animations to elements with different delays */
+  document.querySelectorAll("#briefcase-outline-2 path, #briefcase-outline-2 rect").forEach(function (element, index) {
+        element.style.animation = "caseColorTransition 4s infinite";
+        element.style.animationDelay = index * 0.5 + "s";
+      });
+
+      document.querySelectorAll(".chat").forEach(function (element, index) {
+        element.style.animation = "chatColorTransition 4s infinite";
+        element.style.animationDelay = index * 0.5 + "s";
+      });
+
+      document.querySelectorAll("#airplane-outline path").forEach(function (element, index) {
+        element.style.animation = "planeColorTransition 4s infinite";
+        element.style.animationDelay = index * 0.5 + "s";
+      });
+
+      document.querySelectorAll(".accessibility").forEach(function (element, index) {
+        element.style.animation = "personColorTransition 4s infinite";
+        element.style.animationDelay = index * 0.5 + "s";
+      });
+    }
 </script>
 
 
